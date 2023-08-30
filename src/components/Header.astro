@@ -1,9 +1,10 @@
 ---
 import Navigation from "./Navigation.astro";
 import Description from "./Description.astro";
+const {description} = Astro.props;
 ---
 
-<div class="flex flex-col justify-start">
+<div class="flex flex-col justify-start p-3 lg:min-w-[320px] max-w-md">
     <div class="w-24 h-24">
         <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.45 126.87">
             <defs>
@@ -19,5 +20,5 @@ import Description from "./Description.astro";
             </g>
         </svg>
     </div>
-    <Description />
+    { description && <Description />}
 </div>

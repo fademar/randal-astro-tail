@@ -1,7 +1,11 @@
 ---
 title: 'Pierre Hermé'
-tags: ['Charte graphique', 'logo']
+tags: ['Charte graphique', 'Logo']
 date: '2021'
 sortOrder: 4
-image: { src: '/_astro/M83-JUNK-01.hash.jpg', alt: "Couverture de l'album" }
+image:
+    {
+        src: '../assets/PH-PACK-CHOC-02.jpg',
+        alt: 'Pack de chocolats Pierre Hermé'
+    }
 ---

@@ -1,10 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import { getCollection, getEntry } from 'astro:content';
+
+const allPosts = await getCollection('posts');
 ---
 
-<Layout title="Bienvenue sur le site de Randal Pizzardini Borg">
-  <main>
-    
+<Layout title="Bienvenue sur le site de Randal Pizzardini Borg" description={true}>
+  <main class="px-3 w-full lg:h-screen lg:overflow-auto">
+    <ul class="grid grid-cols-1	xs:grid-cols-2 xs:gap-x-4 lg:gap-x-8">
+      {allPosts.map((post) => (
+        <Card title={post.data.title} href="" src={post.data.image.src} tags={post.data.tags} />
+      ))}
+    </ul>
   </main>
 </Layout>
